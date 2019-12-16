@@ -1,4 +1,4 @@
-package dev.proj.project.application.dao;
+package dev.proj.project.application.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,13 +6,14 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-
+@NamedQuery(name = "User.retriveUsers", query = "FROM User")
+@NamedQuery(name = "User.retriveUser", query = "FROM User WHERE id = :ID")
 @Entity
 @Table(name = "USERS")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Users {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     //@Column(name="ID")

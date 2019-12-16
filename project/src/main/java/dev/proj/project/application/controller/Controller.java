@@ -1,12 +1,11 @@
 package dev.proj.project.application.controller;
 
-import dev.proj.project.application.dao.Users;
-import dev.proj.project.application.service.UsersService;
+import dev.proj.project.application.model.User;
+import dev.proj.project.application.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
@@ -15,25 +14,45 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 public class Controller {
 
     @Autowired
-    private UsersService usersService;
+    private UserServiceImpl userService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello() {
         return "Hello world";
     }
 
-    @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
-    public List<Users> getUsers(){
-        return usersService.getAllUsers();
+    @RequestMapping(value = "/work", method = RequestMethod.GET)
+    public String work() {
+        return "Aplikacja działa";
     }
 
-    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
-    public Optional<Users> getUser(@RequestParam Integer userId){
-        return usersService.getUser(userId);
+    @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
+    public List<User> getUsers(){
+        return userService.getAllUsers();
     }
+
+//    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
+//    public Optional<User> getUser(@RequestParam Integer userId){
+//        return userService.getUser(userId);
+//    }
+    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
+    public User getUser(@RequestParam Integer userId){
+    return userService.findById(userId);
+}
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
-    public void addUser(@RequestBody Users user){
-        usersService.saveUser(user);
+    public void addUser(@RequestBody User user){
+        userService.saveUser(user);
     }
+
+    @RequestMapping(value = "/getAllUsersQuery", method = RequestMethod.GET)
+    public List<User> getUsersQuery(){
+        return userService.getAllUsersQuery();
+    }
+
+    @RequestMapping(value = "/getUserQuery", method = RequestMethod.GET)
+    public User getUserQuery(@RequestParam Integer userId){
+        return userService.getUserQuery(userId);
+    }
+
 }
