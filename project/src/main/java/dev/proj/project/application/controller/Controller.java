@@ -1,5 +1,6 @@
 package dev.proj.project.application.controller;
 
+import dev.proj.project.application.dao.UserDAO;
 import dev.proj.project.application.model.User;
 import dev.proj.project.application.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,12 @@ public class Controller {
     @Autowired
     private UserServiceImpl userService;
 
+    private UserDAO userDAO;
+
+    public Controller(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello() {
         return "Hello world";
@@ -26,9 +33,14 @@ public class Controller {
         return "Aplikacja działa";
     }
 
-    @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
     public List<User> getUsers(){
         return userService.getAllUsers();
+    }*/
+
+    @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
+    public List<User> getUsers(){
+        return userDAO.findAll();
     }
 
 //    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
@@ -39,6 +51,11 @@ public class Controller {
     public User getUser(@RequestParam Integer userId){
     return userService.findById(userId);
 }
+
+    @RequestMapping(value = "/getUserNew", method = RequestMethod.GET)
+    public User getUserNew(@RequestParam Integer userId){
+        return userService.findByIdNew(userId);
+    }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
     public void addUser(@RequestBody User user){
