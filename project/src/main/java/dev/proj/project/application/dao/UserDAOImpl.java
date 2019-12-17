@@ -3,6 +3,7 @@ package dev.proj.project.application.dao;
 import dev.proj.project.application.model.User;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +22,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public List<User> findAll() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

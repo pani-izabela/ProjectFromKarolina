@@ -43,6 +43,11 @@ public class Controller {
         return userDAO.findAll();
     }
 
+    @RequestMapping(value = "/getAllUsers1", method = RequestMethod.GET)
+    public List<User> getUsers1(){
+        return userDAO.findAll();
+    }
+
 //    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
 //    public Optional<User> getUser(@RequestParam Integer userId){
 //        return userService.getUser(userId);
