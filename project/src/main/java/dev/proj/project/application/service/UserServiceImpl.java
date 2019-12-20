@@ -1,5 +1,6 @@
 package dev.proj.project.application.service;
 
+import dev.proj.project.application.dao.UserDAOImpl;
 import dev.proj.project.application.model.User;
 import dev.proj.project.application.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,43 +15,13 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
 
 
-
-    public List<User> getAllUsers(){
-        return userDAO.findAll();
-    }
-
-    public Optional<User> getUser(Integer id){
-        return userDAO.findById(id);
-    }
-
-    public User saveUser(User user){
-        return userDAO.save(user);
-    }
-
-    public void deleteUser(User user){
-        userDAO.delete(user);
-    }
-
-    public List<User> getAllUsersQuery(){
-        return userDAO.retriveUsers();
-    }
-
-    public User getUserQuery(Integer id){
-        return userDAO.retriveUser(id);
+    @Override
+    public User findByIdQuery(int userId) {
+        return userDAO.findByIdQuery(userId);
     }
 
     @Override
-    public User findById(int userId) {
-        return userDAO.findById(userId);
-    }
-
-    @Override
-    public List<User> findAll() {
-        return userDAO.findAll();
-    }
-
-    @Override
-    public User findByIdNew(int userId) {
-        return userDAO.findByIdNew(userId);
+    public List<User> findAllQuery() {
+        return userDAO.findAllQuery();
     }
 }

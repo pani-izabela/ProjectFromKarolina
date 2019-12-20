@@ -9,24 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserDAO extends CrudRepository<User, Integer> {
+public interface UserDAO extends CrudRepository<User, Integer>, UserDAOCastom {
 
-    User findById(int userId);
 
-    @Override
-    List<User> findAll();
-
-    @Override
-    User save(User user);
-
-    @Override
-    void delete(User user);
-
-    @Query
-    List<User> retriveUsers();
-
-    @Query
-    User retriveUser(@Param("ID") int user_id);
-
-    User findByIdNew(int userId);
 }

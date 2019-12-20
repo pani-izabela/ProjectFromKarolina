@@ -6,9 +6,7 @@ import java.util.List;
 
 public interface UserService {
 
-    User findById(int userId);
+    User findByIdQuery(int userId);
 
-    List<User> findAll();
-
-    User findByIdNew(int userId);
+    List<User> findAllQuery();
 }
