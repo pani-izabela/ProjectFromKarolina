@@ -12,7 +12,9 @@ import java.util.Optional;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 
-@RestController
+
+@org.springframework.stereotype.Controller
+//@RestController
 public class Controller {
 
     @Autowired
@@ -24,9 +26,9 @@ public class Controller {
         this.userDAO = userDAO;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping(value = "/index")
     public String hello() {
-        return "Hello world";
+        return "index";
     }
 
     //----------------------------------------------------------------------- pobieranie wszystkich użytkowników
@@ -35,7 +37,7 @@ public class Controller {
     public List<User> getUsersQuery(){ return userService.findAllQuery(); }
 
     @RequestMapping(value = "/getUsers", method = RequestMethod.GET)
-    public Iterable<User> getUsers(){
+    public @ResponseBody Iterable<User> getUsers(){
         return userDAO.findAll();
     }
 
