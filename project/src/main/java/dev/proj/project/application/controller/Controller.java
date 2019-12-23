@@ -58,10 +58,10 @@ public class Controller {
         return userDAO.save(user);
     }
 
-    /*@RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
     public void deleteUser(@RequestParam int userId){
-        return userDAO.deleteById(userId);
-    }*/
+        userDAO.deleteById(userId);
+    }
 
 
 }
