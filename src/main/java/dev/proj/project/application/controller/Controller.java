@@ -31,6 +31,15 @@ public class Controller {
         return "index";
     }
 
+    @GetMapping(value = "/usersList")
+    public String usersList(){ return "usersList";}
+
+    @GetMapping(value = "/register")
+    public String registerUser(){ return "register";}
+
+    @GetMapping(value = "/login")
+    public String loginUser(){ return "login";}
+
     //----------------------------------------------------------------------- pobieranie wszystkich użytkowników
 
     @RequestMapping(value = "/getUsersQuery", method = RequestMethod.GET)
