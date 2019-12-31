@@ -11,7 +11,7 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <div class="container">
     <h2>Rejestracja</h2>
-    <form action="/action_page.php">
+    <form class="form" action="/action_page.php">
       <div class="form-group">
         <label for="pwd">Imię:</label>
         <input type="text" class="form-control form-control-sm" id="firstname" placeholder="Wpisz imię" name="firstname">
@@ -30,11 +30,46 @@
       </div>
       <%--<button type="submit" class="btn btn-primary">Submit</button>--%>
 
-      <button type="button" class="btn btn-success">Zarejestruj</button>
+      <button type="button" class="btn btn-success" id="registerBtn">Zarejestruj</button>
     </form>
   </div>
   <br>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    const firstname = $('#firstname');
+    const lastname = $('#lastname');
+    const email = $('#email');
+    const password = $('#pwd');
+    const registerBtn = $('#registerBtn');
+    const form = $('.form');
+    const apiUrl = "http://localhost:8080";
+
+    //sposób1
+    /*$(function () {
+      registerBtn.click(function () {
+        alert('Witaj');
+      })
+    })*/
+
+    //sposób2
+    registerBtn.on("click", function () {
+      alert('Jesteś zarejestrowany');
+    })
+    //sposób3 -nie działa
+    /*registerBtn.addEventListener("click", function () {
+      alert('Jesteś zarejestrowany');
+    })*/
+   
+   /*function podmienButton() {
+     registerBtn.innerText = "gggg";
+     //alert("Zmieniony");
+   }
+
+    registerBtn.on("click", podmienButton);*/
+
+    
+
+
+  </script>
   </body>
 </html>
