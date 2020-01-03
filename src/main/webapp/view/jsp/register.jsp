@@ -36,13 +36,13 @@
   <br>
 
   <script type="text/javascript">
-    const firstname = $('#firstname');
-    const lastname = $('#lastname');
-    const email = $('#email');
-    const password = $('#pwd');
-    const registerBtn = $('#registerBtn');
-    const form = $('.form');
-    const apiUrl = "http://localhost:8080";
+    const $firstname = $('#firstname');
+    const $lastname = $('#lastname');
+    const $email = $('#email');
+    const $password = $('#pwd');
+    const $registerBtn = $('#registerBtn');
+    const $form = $('.form');
+    const $apiUrl = "http://localhost:8080";
 
     //sposób1
     /*$(function () {
