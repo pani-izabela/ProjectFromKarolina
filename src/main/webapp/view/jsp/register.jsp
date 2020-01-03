@@ -11,13 +11,13 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <div class="container">
     <h2>Rejestracja</h2>
-    <form class="form" action="/action_page.php">
+    <form class="form" class="form" action="/action_page.php">
       <div class="form-group">
-        <label for="pwd">Imię:</label>
+        <label for="firstname">Imię:</label>
         <input type="text" class="form-control form-control-sm" id="firstname" placeholder="Wpisz imię" name="firstname">
       </div>
       <div class="form-group">
-        <label for="pwd">Nazwisko:</label>
+        <label for="lastname">Nazwisko:</label>
         <input type="text" class="form-control form-control-sm" id="lastname" placeholder="Wpisz nazwisko" name="lastname">
       </div>
       <div class="form-group">
@@ -52,20 +52,22 @@
     })*/
 
     //sposób2
-    registerBtn.on("click", function () {
-      alert('Jesteś zarejestrowany');
-    })
-    //sposób3 -nie działa
-    /*registerBtn.addEventListener("click", function () {
+    /*registerBtn.on("click", function () {
       alert('Jesteś zarejestrowany');
     })*/
+
    
-   /*function podmienButton() {
-     registerBtn.innerText = "gggg";
-     //alert("Zmieniony");
+   function podmienButton() {
+     //registerBtn.innerText = "gggg";
+     //registerBtn.text = "gggg";
+     alert(registerBtn.text());
    }
 
-    registerBtn.on("click", podmienButton);*/
+    registerBtn.on("click", podmienButton);
+
+   form.on("submit", function(e){
+     e.preventDefault();
+   })
 
     
 
