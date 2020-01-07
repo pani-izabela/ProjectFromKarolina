@@ -11,7 +11,7 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <div class="container">
     <h2>Logowanie</h2>
-    <form action="/action_page.php">
+    <form class="form" action="/action_page.php" >
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Podaj email" name="email">
@@ -22,13 +22,38 @@
       </div>
       <%--<button type="submit" class="btn btn-primary">Submit</button>--%>
 
-      <button type="button" class="btn btn-success">Zaloguj</button>
+      <button type="submit" class="btn btn-success">Zaloguj</button>
     </form>
   </div>
   <br>
 
   <script type="text/javascript">
+      const apiUrl = "http://localhost:8080";
+      const $email = $('#email');
+      const $password = $('#pwd');
+      const $form = $('.form');
 
+      $form.on("submit", function(e){
+          e.preventDefault();
+
+          $.ajax({
+              url: apiUrl + '/addUser',
+              method: "POST",
+              contentType: "application/json",
+              dataType: "json",
+              data: JSON.stringify({
+                  email: $email.val(),
+                  pass: $password.val()
+              })
+          })
+              .done(function (res) {
+                  if(res==true)
+                  alert('Użytkownik zalogował się');
+              })
+              .error(function () {
+                  alert('Nie udało się zalogować');
+              })
+      })
   </script>
   </body>
 </html>

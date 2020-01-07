@@ -11,7 +11,7 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <div class="container">
     <h2>Rejestracja</h2>
-    <form class="form" class="form" action="/action_page.php">
+    <form class="form" action="/action_page.php">
       <div class="form-group">
         <label for="firstname">Imię:</label>
         <input type="text" class="form-control form-control-sm" id="firstname" placeholder="Wpisz imię" name="firstname">
