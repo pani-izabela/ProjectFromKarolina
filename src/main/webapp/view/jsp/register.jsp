@@ -42,22 +42,7 @@
     const $email = $('#email');
     const $password = $('#pwd');
     const $form = $('.form');
-    const $registerBtn = $form.find(":submit");
-
-
-    //sposób2
-    /*registerBtn.on("click", function () {
-      alert('Jesteś zarejestrowany');
-    })*/
-
-   
-   /*function podmienButton() {
-     //registerBtn.innerText = "gggg";
-     //registerBtn.text = "gggg";
-     alert(registerBtn.text());
-   }
-
-    registerBtn.on("click", podmienButton);*/
+    //const $registerBtn = $form.find(":submit");
 
    $form.on("submit", function(e){
      e.preventDefault();
@@ -75,7 +60,10 @@
        })
      })
              .done(function () {
-               alert('Rejestracja udała się!')
+               alert('Rejestracja udała się!');
+             })
+             .error(function () {
+               alert('Nie udało się');
              })
    })
 

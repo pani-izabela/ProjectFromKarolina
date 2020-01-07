@@ -65,7 +65,7 @@ public class Controller {
     //----------------------------------------------------------------------- dodawanie jednego użytkownika
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
-    public User addUser(@RequestBody User user){
+    public @ResponseBody User addUser(@RequestBody User user){
         return userDAO.save(user);
     }
 
