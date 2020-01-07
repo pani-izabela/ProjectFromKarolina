@@ -30,26 +30,20 @@
       </div>
       <%--<button type="submit" class="btn btn-primary">Submit</button>--%>
 
-      <button type="button" class="btn btn-success" id="registerBtn">Zarejestruj</button>
+      <button type="submit" class="btn btn-success" id="registerBtn">Zarejestruj</button>
     </form>
   </div>
   <br>
 
   <script type="text/javascript">
+    const apiUrl = "http://localhost:8080";
     const $firstname = $('#firstname');
     const $lastname = $('#lastname');
     const $email = $('#email');
     const $password = $('#pwd');
-    const $registerBtn = $('#registerBtn');
     const $form = $('.form');
-    const $apiUrl = "http://localhost:8080";
+    const $registerBtn = $form.find(":submit");
 
-    //sposób1
-    /*$(function () {
-      registerBtn.click(function () {
-        alert('Witaj');
-      })
-    })*/
 
     //sposób2
     /*registerBtn.on("click", function () {
@@ -57,19 +51,34 @@
     })*/
 
    
-   function podmienButton() {
+   /*function podmienButton() {
      //registerBtn.innerText = "gggg";
      //registerBtn.text = "gggg";
      alert(registerBtn.text());
    }
 
-    registerBtn.on("click", podmienButton);
+    registerBtn.on("click", podmienButton);*/
 
-   form.on("submit", function(e){
+   $form.on("submit", function(e){
      e.preventDefault();
+
+     $.ajax({
+       url: apiUrl + '/addUser',
+       method: "POST",
+       contentType: "application/json",
+       dataType: "json",
+       data: JSON.stringify({
+         firstname: $firstname.val(),
+         lastname: $lastname.val(),
+         email: $email.val(),
+         pass: $password.val()
+       })
+     })
+             .done(function () {
+               alert('Rejestracja udała się!')
+             })
    })
 
-    
 
 
   </script>
