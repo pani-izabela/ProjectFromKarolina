@@ -69,9 +69,22 @@ public class Controller {
         return userDAO.save(user);
     }
 
+    //----------------------------------------------------------------------- usuwanie jednego użytkownika
+
     @RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
     public void deleteUser(@RequestParam int userId){
         userDAO.deleteById(userId);
+    }
+
+    //----------------------------------------------------------------------- pozostałe metody
+
+    @RequestMapping(value = "/loginUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
+    public @ResponseBody boolean loginUser(@RequestBody String email, @RequestBody String pass){
+        boolean userIsLogged = false;
+        if (userService.findByEmailAndPass(email, pass) == true)
+            userIsLogged = true;
+        else userIsLogged = false;
+        return userIsLogged;
     }
 
 

@@ -9,7 +9,7 @@
   </head>
   <body>
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
-  <button type="button" class="btn btn-success">Pobierz listę użytkowników</button>
+  <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
   <br>
   <br>
   <table class="table table-striped">
@@ -23,6 +23,34 @@
     </thead>
   </table>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+      const apiUrl = "http://localhost:8080";
+      const $btn = $("#button")
+      const $table = $(".table table-striped")
+
+    $btn.on("click", function (e) {
+        e.preventDefault();
+
+        /*$.ajax({
+            url: apiUrl + "/getUsers",
+            dataType: "json"
+        })
+
+            .done((res)=>{
+                $table.empty();
+                res.forEach(el=>{
+                        $table.append('<th><th>${el.id}</th></th>')
+                    })
+            })*/
+
+        $.get(apiUrl + "/getUsers", function (res) {
+            $table.empty();
+            $.forEach(res=>{
+                $table.append('<th>' + res[0].firstname + '</th>')
+            })
+
+        } )
+    })
+  </script>
   </body>
 </html>

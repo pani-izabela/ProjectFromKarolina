@@ -24,4 +24,17 @@ public class UserServiceImpl implements UserService {
     public List<User> findAllQuery() {
         return userDAO.findAllQuery();
     }
+
+    @Override
+    public boolean findByEmailAndPass(String email, String pass) {
+        boolean islogged = false;
+        User user = userDAO.findByEmailAndPassQuery(email, pass);
+        String stringUser = user.toString();
+        if(stringUser.contains(email)&&stringUser.contains(pass))
+            islogged = true;
+        else
+            islogged = false;
+
+        return islogged;
+    }
 }

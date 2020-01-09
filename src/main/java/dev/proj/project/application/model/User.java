@@ -8,7 +8,8 @@ import javax.persistence.*;
 
 @NamedQueries({
         @NamedQuery(name = User.GET_USER_BY_ID, query = User.QUERY_GET_USER_BY_ID),
-        @NamedQuery(name = User.GET_USERS, query = User.QUERY_GET_USERS)
+        @NamedQuery(name = User.GET_USERS, query = User.QUERY_GET_USERS),
+        @NamedQuery(name = User.GET_USER_BY_EMAIL_AND_PASS, query = User.QUERY_GET_USER_BY_EMAIL_AND_PASS)
 })
 
 @Entity
@@ -23,6 +24,9 @@ public class User {
 
     public static final String GET_USERS = "User.get_users";
     public static final String QUERY_GET_USERS = "select u from User u";
+
+    public static final String GET_USER_BY_EMAIL_AND_PASS = "User.get_user_by_name_and_email";
+    public static final String QUERY_GET_USER_BY_EMAIL_AND_PASS = "select u from User u where u.email = :email and u.pass = :pass";
 
 
     @Id

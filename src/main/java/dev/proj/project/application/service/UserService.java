@@ -9,4 +9,6 @@ public interface UserService {
     User findByIdQuery(int userId);
 
     List<User> findAllQuery();
+
+    boolean findByEmailAndPass(String email, String pass);
 }

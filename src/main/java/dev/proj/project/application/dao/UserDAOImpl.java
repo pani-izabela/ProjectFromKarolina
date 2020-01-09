@@ -27,4 +27,12 @@ public class UserDAOImpl implements UserDAOCastom {
         return em.createNamedQuery(User.GET_USERS, User.class)
                 .getResultList();
     }
+
+    @Override
+    public User findByEmailAndPassQuery(String email, String pass) {
+        return em.createNamedQuery(User.GET_USER_BY_EMAIL_AND_PASS, User.class)
+                .setParameter("email",email)
+                .setParameter("pass",pass)
+                .getSingleResult();
+    }
 }

@@ -37,7 +37,7 @@
           e.preventDefault();
 
           $.ajax({
-              url: apiUrl + '/addUser',
+              url: apiUrl + '/loginUser',
               method: "POST",
               contentType: "application/json",
               dataType: "json",
@@ -49,6 +49,7 @@
               .done(function (res) {
                   if(res==true)
                   alert('Użytkownik zalogował się');
+                  window.location.href = "usersList"
               })
               .error(function () {
                   alert('Nie udało się zalogować');
