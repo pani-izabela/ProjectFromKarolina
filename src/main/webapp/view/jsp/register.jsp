@@ -42,7 +42,6 @@
     const $email = $('#email');
     const $password = $('#pwd');
     const $form = $('.form');
-    //const $registerBtn = $form.find(":submit");
 
    $form.on("submit", function(e){
      e.preventDefault();

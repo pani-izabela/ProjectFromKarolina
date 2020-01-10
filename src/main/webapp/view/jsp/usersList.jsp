@@ -12,13 +12,13 @@
   <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
   <br>
   <br>
-  <table class="table table-striped">
+  <table id="table" class="table table-striped">
     <thead>
-    <tr>
-      <th>id</th>
-      <th>imię</th>
-      <th>nazwisko</th>
-      <th>email</th>
+    <tr >
+      <th scope="col">id</th>
+      <th scope="col">imię</th>
+      <th scope="col">nazwisko</th>
+      <th scope="col">email</th>
     </tr>
     </thead>
   </table>
@@ -31,26 +31,20 @@
     $btn.on("click", function (e) {
         e.preventDefault();
 
-        /*$.ajax({
-            url: apiUrl + "/getUsers",
-            dataType: "json"
-        })
-
-            .done((res)=>{
-                $table.empty();
-                res.forEach(el=>{
-                        $table.append('<th><th>${el.id}</th></th>')
-                    })
-            })*/
-
-        $.get(apiUrl + "/getUsers", function (res) {
-            $table.empty();
-            $.forEach(res=>{
-                $table.append('<th>' + res[0].firstname + '</th>')
-            })
-
-        } )
-    })
+        $.get(apiUrl + "/getUsers", function (data) {
+            //$table.empty();
+          var users_data = '';
+          $.each(data, function (key, value) {
+            users_data += '<tr>';
+            users_data += '<td>' + value.id + '</td>';
+            users_data += '<td>' + value.firstname + '</td>';
+            users_data += '<td>' + value.lastname + '</td>';
+            users_data += '<td>' + value.email + '</td>';
+            users_data += '</tr>';
+          });
+          $('#table').append(users_data);
+        });
+    });
   </script>
   </body>
 </html>

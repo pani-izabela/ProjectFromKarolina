@@ -1,5 +1,6 @@
 package dev.proj.project.application.controller;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import dev.proj.project.application.dao.UserDAO;
 import dev.proj.project.application.model.User;
 import dev.proj.project.application.service.UserService;
@@ -79,8 +80,10 @@ public class Controller {
     //----------------------------------------------------------------------- pozostałe metody
 
     @RequestMapping(value = "/loginUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
-    public @ResponseBody boolean loginUser(@RequestBody String email, @RequestBody String pass){
+    public @ResponseBody boolean loginUser(@RequestBody User user){
         boolean userIsLogged = false;
+        String email = user.getEmail();
+        String pass = user.getPass();
         if (userService.findByEmailAndPass(email, pass) == true)
             userIsLogged = true;
         else userIsLogged = false;
