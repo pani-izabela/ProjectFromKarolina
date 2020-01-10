@@ -9,6 +9,7 @@
   </head>
   <body>
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
+  <br>
   <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
   <br>
   <br>
@@ -19,6 +20,7 @@
       <th scope="col">imię</th>
       <th scope="col">nazwisko</th>
       <th scope="col">email</th>
+      <th scope="col">action</th>
     </tr>
     </thead>
   </table>
@@ -26,13 +28,13 @@
   <script type="text/javascript">
       const apiUrl = "http://localhost:8080";
       const $btn = $("#button")
-      const $table = $(".table table-striped")
+      const $table = $("#table")
 
     $btn.on("click", function (e) {
         e.preventDefault();
 
         $.get(apiUrl + "/getUsers", function (data) {
-            //$table.empty();
+            $table.empty();
           var users_data = '';
           $.each(data, function (key, value) {
             users_data += '<tr>';
@@ -40,11 +42,25 @@
             users_data += '<td>' + value.firstname + '</td>';
             users_data += '<td>' + value.lastname + '</td>';
             users_data += '<td>' + value.email + '</td>';
+            users_data += '<td><button id="deleteBtn'+key+'" type="button" class="btn btn-success">Usuń</button></td>';
             users_data += '</tr>';
           });
-          $('#table').append(users_data);
+          $($table).append(users_data);
         });
     });
+  </script>
+
+  <script type="text/javascript">
+      const apiUrl = "http://localhost:8080";
+
+      $btn.on("click", function (e) {
+          e.preventDefault();
+
+          $.delete(apiUrl + "/deleteUser", function (res) {
+
+          });
+
+
   </script>
   </body>
 </html>
