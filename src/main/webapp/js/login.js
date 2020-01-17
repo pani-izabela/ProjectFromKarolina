@@ -1,5 +1,5 @@
 
-const apiUrl = "http://localhost:8080";
+// const apiUrl = "http://localhost:8080";
 
 function prepareLoginData() {
     $('#loginbtn').click(function () {
@@ -13,7 +13,7 @@ function prepareLoginData() {
 
 function login(data) {
     $.ajax({
-        url: apiUrl + '/loginUser',
+        url: "http://localhost:8080" + '/loginUser',
         method: "POST",
         contentType: "application/json",
         dataType: "json",

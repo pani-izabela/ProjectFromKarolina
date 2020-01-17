@@ -1,7 +1,8 @@
+
 window.onload = function () {
-    prepareRegisterData();
     prepareLoginData();
+    prepareRegisterData();
     getUsersList();
-    deleteUser();
+    //deleteUser();
 };
 

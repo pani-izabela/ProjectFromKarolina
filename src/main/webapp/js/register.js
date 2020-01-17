@@ -1,5 +1,5 @@
 
-const apiUrl = "http://localhost:8080";
+// const apiUrl = "http://localhost:8080";
 
 function prepareRegisterData() {
     $('#registerBtn').click(function () {
@@ -15,7 +15,7 @@ function prepareRegisterData() {
 
 function register(data) {
     $.ajax({
-        url: apiUrl + '/addUser',
+        url: "http://localhost:8080" + '/addUser',
         method: "POST",
         contentType: "application/json",
         dataType: "json",
