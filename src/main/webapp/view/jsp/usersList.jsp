@@ -4,8 +4,9 @@
   <head>
     <title>Users</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
   </head>
   <body>
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
@@ -25,42 +26,9 @@
     </thead>
   </table>
 
-  <script type="text/javascript">
-      const apiUrl = "http://localhost:8080";
-      const $btn = $("#button")
-      const $table = $("#table")
-
-    $btn.on("click", function (e) {
-        e.preventDefault();
-
-        $.get(apiUrl + "/getUsers", function (data) {
-            $table.empty();
-          var users_data = '';
-          $.each(data, function (key, value) {
-            users_data += '<tr>';
-            users_data += '<td>' + value.id + '</td>';
-            users_data += '<td>' + value.firstname + '</td>';
-            users_data += '<td>' + value.lastname + '</td>';
-            users_data += '<td>' + value.email + '</td>';
-            users_data += '<td><button id="deleteBtn' + key + '" type="button" class="btn btn-success">Usuń</button></td>';
-            users_data += '</tr>';
-          });
-          $($table).append(users_data);
-        });
-    });
+  <script src="../../js/main.js" type="text/javascript"></script>
+  <script src="../../js/usersList.js" type="text/javascript">
   </script>
 
-  <script type="text/javascript">
-      const apiUrl = "http://localhost:8080";
-
-      $btn.on("click", function (e) {
-          e.preventDefault();
-
-          $.delete(apiUrl + "/deleteUser", function (res) {
-
-          });
-
-
-  </script>
   </body>
 </html>

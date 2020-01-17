@@ -4,8 +4,9 @@
   <head>
     <title>Users</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
   </head>
   <body>
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
@@ -22,39 +23,12 @@
       </div>
       <%--<button type="submit" class="btn btn-primary">Submit</button>--%>
 
-      <button type="submit" class="btn btn-success">Zaloguj</button>
+      <button type="button" class="btn btn-success" id="loginbtn">Zaloguj</button>
     </form>
   </div>
   <br>
 
-  <script type="text/javascript">
-      const apiUrl = "http://localhost:8080";
-      const $email = $('#email');
-      const $password = $('#pwd');
-      const $form = $('.form');
-
-      $form.on("submit", function(e){
-          e.preventDefault();
-
-          $.ajax({
-              url: apiUrl + '/loginUser',
-              method: "POST",
-              contentType: "application/json",
-              dataType: "json",
-              data: JSON.stringify({
-                  email: $email.val(),
-                  pass: $password.val()
-              })
-          })
-              .done(function (res) {
-                  if(res==true)
-                  alert('Użytkownik zalogował się');
-                  window.location.href = "usersList"
-              })
-              .error(function () {
-                  alert('Nie udało się zalogować');
-              })
-      })
-  </script>
+  <script src="../../js/main.js" type="text/javascript"></script>
+  <script src="../../js/login.js" type="text/javascript"></script>
   </body>
 </html>
