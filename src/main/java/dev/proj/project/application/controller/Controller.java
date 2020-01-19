@@ -59,7 +59,7 @@ public class Controller {
     }
 
     @RequestMapping(value = "/getUser", method = RequestMethod.GET)
-    public Optional<User> getUser(@RequestParam Integer userId){
+    public @ResponseBody Optional<User> getUser(@RequestParam Integer userId){
         return userDAO.findById(userId);
     }
 
@@ -73,7 +73,7 @@ public class Controller {
     //----------------------------------------------------------------------- usuwanie jednego użytkownika
 
     @RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
-    public void deleteUser(@RequestParam int userId){
+    public @ResponseBody void deleteUser(@RequestParam int userId){
         userDAO.deleteById(userId);
     }
 

@@ -23,6 +23,7 @@ function register(data) {
     })
         .done(function () {
             alert('Rejestracja udała się!');
+            //window.location.href = "login"
         })
         .error(function () {
             alert('Nie udało się');
