@@ -3,6 +3,7 @@
 /*const $btn = $("#button")
 const $table = $("#table")*/
 function setUsersInTabele(){
+
     $.get("http://localhost:8080" + "/getUsers", function (data) {
         $('#table').empty();
         var users_data = '';

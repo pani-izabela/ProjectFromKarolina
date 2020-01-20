@@ -22,6 +22,7 @@ function register(data) {
         data: JSON.stringify(data)
     })
         .done(function () {
+            window.location.href = "login"
             alert('Rejestracja udała się!');
             //window.location.href = "login"
         })
