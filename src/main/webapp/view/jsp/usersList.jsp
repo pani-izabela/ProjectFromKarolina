@@ -24,6 +24,7 @@
       <th scope="col">action</th>
     </tr>
     </thead>
+    <tbody></tbody>
   </table>
 
   <script src="../../js/main.js" type="text/javascript"></script>

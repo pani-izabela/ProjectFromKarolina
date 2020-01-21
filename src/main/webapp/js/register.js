@@ -24,9 +24,8 @@ function register(data) {
         .done(function () {
             window.location.href = "login"
             alert('Rejestracja udała się!');
-            //window.location.href = "login"
         })
         .error(function () {
-            alert('Nie udało się');
+            alert('Nie udało się zarejestrować');
         })
 }

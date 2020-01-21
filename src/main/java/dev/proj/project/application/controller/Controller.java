@@ -1,6 +1,5 @@
 package dev.proj.project.application.controller;
 
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import dev.proj.project.application.dao.UserDAO;
 import dev.proj.project.application.model.User;
 import dev.proj.project.application.service.UserService;
