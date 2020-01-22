@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @NamedQueries({
         @NamedQuery(name = User.GET_USER_BY_ID, query = User.QUERY_GET_USER_BY_ID),
@@ -31,11 +33,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //@Column(name="ID")
     private Integer id;
     private String firstname;
     private String lastname;
     private String email;
     private String pass;
+    @OneToMany(
+            targetEntity = Adress.class,
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    private List<Adress> adresses = new ArrayList<>();
 
 }
