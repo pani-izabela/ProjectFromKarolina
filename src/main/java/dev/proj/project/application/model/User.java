@@ -1,5 +1,6 @@
 package dev.proj.project.application.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -38,6 +39,7 @@ public class User {
     private String lastname;
     private String email;
     private String pass;
+    @JsonIgnore
     @OneToMany(
             targetEntity = Adress.class,
             mappedBy = "user",
