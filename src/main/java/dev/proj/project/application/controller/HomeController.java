@@ -35,7 +35,7 @@ public class HomeController {
     //----------------------------------------------------------------------- pobieranie jednego użytkownika
 
     @RequestMapping(value = "/getHome", method = RequestMethod.GET)
-    public @ResponseBody Optional<Home> getUser(@RequestParam Integer homeId){
+    public @ResponseBody Optional<Home> getHome(@RequestParam Integer homeId){
         return homeDAO.findById(homeId);
     }
 

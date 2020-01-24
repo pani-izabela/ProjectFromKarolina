@@ -18,8 +18,8 @@ public class Home {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull
-    private Integer idHome;
+    private Integer id;
     private Double area;
     private Double price;
-    private String typeHome;
+    private String type;
 }

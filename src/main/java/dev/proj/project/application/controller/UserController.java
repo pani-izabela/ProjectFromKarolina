@@ -12,7 +12,6 @@ import java.util.Optional;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 
-
 @org.springframework.stereotype.Controller
 //@RestController
 public class UserController {
@@ -25,20 +24,6 @@ public class UserController {
     public UserController(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
-
-    @GetMapping(value = "/index")
-    public String hello() {
-        return "index";
-    }
-
-    @GetMapping(value = "/usersList")
-    public String usersList(){ return "usersList";}
-
-    @GetMapping(value = "/register")
-    public String registerUser(){ return "register";}
-
-    @GetMapping(value = "/login")
-    public String loginUser(){ return "login";}
 
     //----------------------------------------------------------------------- pobieranie wszystkich użytkowników
 

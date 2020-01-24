@@ -1,21 +1,12 @@
 package dev.proj.project.application.controller;
 
-import dev.proj.project.application.dao.UserDAO;
-import dev.proj.project.application.model.User;
-import dev.proj.project.application.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
-import java.util.Optional;
-
-import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 
 @org.springframework.stereotype.Controller
 //@RestController
 public class Controller {
-
 
     @GetMapping(value = "/index")
     public String hello() {
@@ -31,6 +22,7 @@ public class Controller {
     @GetMapping(value = "/login")
     public String loginUser(){ return "login";}
 
-
+    @GetMapping(value = "/home")
+    public String home(){ return "home";}
 
 }
