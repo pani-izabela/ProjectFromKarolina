@@ -25,4 +25,7 @@ public class Controller {
     @GetMapping(value = "/home")
     public String home(){ return "home";}
 
+    @GetMapping(value = "/adress")
+    public String adress(){ return "adress";}
+
 }
