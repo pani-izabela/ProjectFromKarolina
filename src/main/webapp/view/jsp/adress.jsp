@@ -52,12 +52,12 @@
       $('#addingAdressBtn').click(function () {
         let adresData = {
           street: $('#street').val(),
-          nr_home: $('#nrHome').val(),
-          nr_flat: $('#nrFlat').val(),
+          nrHome: $('#nrHome').val(),
+          nrFlat: $('#nrFlat').val(),
           city: $('#city').val(),
-          postal_code: $('#postalCode').val(),
-          home_id: '13',
-          user_id: '12'
+          postalCode: $('#postalCode').val(),
+          home: '30',
+          user: '28'
         };
           addAdress(adresData);
       })
