@@ -55,9 +55,7 @@
           nrHome: $('#nrHome').val(),
           nrFlat: $('#nrFlat').val(),
           city: $('#city').val(),
-          postalCode: $('#postalCode').val(),
-          home: '30',
-          user: '28'
+          postalCode: $('#postalCode').val()
         };
           addAdress(adresData);
       })
