@@ -55,7 +55,13 @@
           nrHome: $('#nrHome').val(),
           nrFlat: $('#nrFlat').val(),
           city: $('#city').val(),
-          postalCode: $('#postalCode').val()
+          postalCode: $('#postalCode').val(),
+          home:{
+              id: '66'
+          },
+          user:{
+              id: '28'
+          }
         };
           addAdress(adresData);
       })

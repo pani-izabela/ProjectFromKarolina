@@ -39,7 +39,7 @@ public class User {
     private String lastname;
     private String email;
     private String pass;
-    //@JsonIgnore
+    @JsonIgnore
     @OneToMany(
             targetEntity = Adress.class,
             mappedBy = "user",

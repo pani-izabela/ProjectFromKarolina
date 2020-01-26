@@ -22,12 +22,10 @@ public class Adress {
     private String nrFlat;
     private String postalCode;
     private String city;
-    @JsonIgnore
     @JoinColumn(name = "HOME_ID")
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private Home home;
-    @JsonIgnore
     @JoinColumn(name = "USER_ID")
-    @ManyToOne()
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     private User user;
 }

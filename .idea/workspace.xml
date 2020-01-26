@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="32127981-79ab-46bd-833c-a84b2d41f5b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,7 +32,7 @@
     <session id="-758578977">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="15" />
+          <entry key="java" value="16" />
           <entry key="js" value="2" />
           <entry key="jsp" value="6" />
           <entry key="properties" value="1" />
@@ -38,7 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="16" />
           <entry key="JSP" value="6" />
           <entry key="JavaScript" value="2" />
           <entry key="Properties" value="1" />
@@ -46,15 +48,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="162" />
-          <entry key="jsp" value="91" />
+          <entry key="java" value="182" />
+          <entry key="jsp" value="272" />
           <entry key="properties" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="162" />
-          <entry key="JSP" value="91" />
+          <entry key="JAVA" value="182" />
+          <entry key="JSP" value="272" />
           <entry key="Properties" value="3" />
         </counts>
       </usages-collector>
@@ -99,20 +101,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            <state relative-caret-position="236">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/dao/HomeDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/UserViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/dao/HomeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/main.js" />
@@ -177,8 +187,9 @@
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/dao/AdressDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/AdressController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java" />
       </list>
     </option>
   </component>
@@ -202,7 +213,7 @@
     </option>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1376" />
@@ -341,7 +352,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579909673959" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580074567891" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -434,12 +445,12 @@
       <workItem from="1579769526098" duration="1013000" />
       <workItem from="1579789523434" duration="633000" />
       <workItem from="1579792025197" duration="2456000" />
-      <workItem from="1579905595024" duration="3970000" />
+      <workItem from="1579905595024" duration="10781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128769000" />
+    <option name="totallyTimeSpent" value="135580000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,7 +462,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21808511" />
@@ -464,7 +475,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.29180327" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924013" visible="true" weight="0.2557377" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -638,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Home.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -700,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/usersList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
@@ -742,6 +739,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/controller/AdressController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -749,20 +760,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/jsp/adress.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/proj/project/application/model/Adress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+        <state relative-caret-position="236">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
