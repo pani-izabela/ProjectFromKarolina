@@ -28,9 +28,11 @@
   </div>
   <br>
 
+
   <script src="../../js/main.js" type="text/javascript"></script>
   <script src="../../js/register.js" type="text/javascript"></script>
   <script src="../../js/login.js" type="text/javascript"></script>
   <script src="../../js/usersList.js" type="text/javascript"></script>
+
   </body>
 </html>

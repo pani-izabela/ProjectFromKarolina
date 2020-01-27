@@ -3,6 +3,16 @@
 /*const $btn = $("#button")
 const $table = $("#table")*/
 
+function test() {
+    $('#buttonAdress').on("click", function () {
+        console.log('Uwaga');
+        console.log("globalvariable: ", globalVariable);
+        console.log("firsname: ", firstnameXXX);
+        //console.log("logged user.firstname", loggedUser);
+        //console.log("logged user.email", loggedUser.email);
+        //console.log("Id usera: " ,loggedUser.id);
+    })
+}
 
 function getUsersList() {
     $('#button').on("click", function (e) {
@@ -22,6 +32,7 @@ function getUsersList() {
             });
             $('#table > tbody').append(users_data);
             deleteUser(users_data);
+            console.log("fdfsf:", globalVariable);
         })
     });
  }
@@ -43,5 +54,13 @@ function deleteUser() {
                     alert('Nie udało się usunąć użytkownika o id ' + user_Id + ' , spróbuj ponownie.')
                 }
             });
+        })
+}
+
+function test1() {
+    $('#buttonAdress').click(function () {
+        console.log('Uwaga');
+        //console.log(globalVariable.test);
+        //alert(globalVariable.test);
         })
 }

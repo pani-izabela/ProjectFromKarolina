@@ -29,12 +29,17 @@ public class UserServiceImpl implements UserService {
     public boolean findByEmailAndPass(String email, String pass) {
         boolean islogged = false;
         User user = userDAO.findByEmailAndPassQuery(email, pass);
-        String stringUser = user.toString();
-        if(stringUser.contains(email)&&stringUser.contains(pass))
+        if(user.getEmail().contains(email)&&user.getPass().contains(pass))
             islogged = true;
         else
             islogged = false;
 
         return islogged;
+    }
+
+    @Override
+    public User findUserByEmailAndPass(String email, String pass) {
+        User user = userDAO.findByEmailAndPassQuery(email, pass);
+        return user;
     }
 }

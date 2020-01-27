@@ -74,5 +74,13 @@ public class UserController {
         return userIsLogged;
     }
 
+    @RequestMapping(value = "/getDataLoggedUser", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
+    public @ResponseBody User getDataLoggedUser(@RequestBody User user){
+        String email = user.getEmail();
+        String pass = user.getPass();
+        User userFromDB = userService.findUserByEmailAndPass(email, pass);
+        return userFromDB;
+    }
+
 
 }

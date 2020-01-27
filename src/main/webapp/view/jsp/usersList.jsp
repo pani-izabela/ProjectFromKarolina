@@ -12,6 +12,7 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <br>
   <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
+  <button type="button" id="buttonAdress" class="btn btn-success">Pobierz listę adresów moich domów</button>
   <br>
   <br>
   <table id="table" class="table table-striped">
@@ -31,6 +32,8 @@
   <script src="../../js/register.js" type="text/javascript"></script>
   <script src="../../js/login.js" type="text/javascript"></script>
   <script src="../../js/usersList.js" type="text/javascript"></script>
+  <script src="../../js/home.js" type="text/javascript"></script>
+
 
   </body>
 </html>

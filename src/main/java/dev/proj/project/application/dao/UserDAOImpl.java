@@ -35,4 +35,5 @@ public class UserDAOImpl implements UserDAOCastom {
                 .setParameter("pass",pass)
                 .getSingleResult();
     }
+
 }

@@ -11,4 +11,6 @@ public interface UserService {
     List<User> findAllQuery();
 
     boolean findByEmailAndPass(String email, String pass);
+
+    User findUserByEmailAndPass(String email, String pass);
 }

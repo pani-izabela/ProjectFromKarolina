@@ -4,7 +4,8 @@ window.onload = function () {
     prepareRegisterData();
     getUsersList();
     //deleteUser();
-    prepareHomeData();
+    //prepareHomeData();
+    test();
 
 };
 
