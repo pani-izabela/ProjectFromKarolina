@@ -57,3 +57,31 @@ function addHomePage() {
         window.location.href = "home";
     })
 }
+
+function getUserHomes() {
+    $('#showHomesBtn').on("click", function (e) {
+        e.preventDefault();
+
+        var user_Id = localStorage.getItem('userLoggedId');
+
+        $.get("http://localhost:8080" + "/getHomesUser?" + $.param({userId: user_Id}), function (data) {
+            $('#tableUserHomes > tbody').empty();
+            var user_homes_data = '';
+            $.each(data, function (key, value) {
+                user_homes_data += '<tr>';
+                user_homes_data += '<td>' + value.id + '</td>';
+                user_homes_data += '<td>' + value.area + '</td>';
+                user_homes_data += '<td>' + value.price + '</td>';
+                user_homes_data += '<td>' + value.type + '</td>';
+                user_homes_data += '<td>' + value.street + '</td>';
+                user_homes_data += '<td>' + value.nrHome + '</td>';
+                user_homes_data += '<td>' + value.nrFlat + '</td>';
+                user_homes_data += '<td>' + value.city + '</td>';
+                user_homes_data += '<td>' + value.code + '</td>';
+                user_homes_data += '</tr>';
+            });
+            $('#tableUserHomes > tbody').append(user_homes_data);
+            deleteUser(user_homes_data);
+        })
+    });
+}

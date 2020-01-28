@@ -28,6 +28,24 @@
     </thead>
     <tbody></tbody>
   </table>
+  <br>
+  <br>
+  <table id="tableUserHomes" class="table table-striped">
+    <thead>
+    <tr >
+      <th scope="col">id</th>
+      <th scope="col">powierzchnia</th>
+      <th scope="col">cena</th>
+      <th scope="col">typ</th>
+      <th scope="col">ulica</th>
+      <th scope="col">nr domu</th>
+      <th scope="col">nr mieszkania</th>
+      <th scope="col">miasto</th>
+      <th scope="col">kod pocztowy</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <script src="../../js/main.js" type="text/javascript"></script>
   <script src="../../js/register.js" type="text/javascript"></script>

@@ -8,6 +8,7 @@ window.onload = function () {
     addHomePage();
     addHome();
     prepareAdressData();
+    getUserHomes();
 
 };
 
