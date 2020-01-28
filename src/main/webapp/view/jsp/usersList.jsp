@@ -12,8 +12,8 @@
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <br>
   <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
-  <button type="button" id="buttonAdress" class="btn btn-success">Pobierz listę adresów moich domów</button>
   <button type="button" id="addHomeBtn" class="btn btn-success">Dodaj dom</button>
+  <button type="button" id="showHomesBtn" class="btn btn-success">Pokaż moje domy</button>
   <br>
   <br>
   <table id="table" class="table table-striped">
