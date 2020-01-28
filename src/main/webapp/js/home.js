@@ -16,13 +16,11 @@ function addHome(data) {
         method: "POST",
         contentType: "application/json",
         dataType: "json",
-        data: JSON.stringify(data)
-    })
-        .done(function () {
-            window.location.href = "login"
+        data: JSON.stringify(data),
+        success: function (res) {
+            localStorage.setItem('homeLoggedId', res.id);
             alert('Udało się dodać dom');
-        })
-        .error(function () {
-            alert('Nie udało się dodać domu');
-        })
+            window.location.href = "adress";
+        }
+    });
 }

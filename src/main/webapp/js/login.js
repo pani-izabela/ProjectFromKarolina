@@ -1,12 +1,8 @@
 
-// const apiUrl = "http://localhost:8080";
-// var globalVariable={
-//     test: 'myVar'
-// };
-
 var globalVariable= {
     test: "Iza"
 };
+
 /*var loggedUser = {
     id: 1,
     firstname: "Olaf",
@@ -14,7 +10,6 @@ var globalVariable= {
     email: loginData.email,
     pass: loginData.pass
 };*/
-var firstnameXXX = '';
 
 
 function prepareLoginData() {
@@ -23,9 +18,8 @@ function prepareLoginData() {
             email: $('#email').val(),
             pass: $('#pwd').val()
         };
-        //login(loginData);
         prepareUserData(loginData);
-
+        login(loginData);
     })
 }
 
@@ -35,25 +29,14 @@ function prepareUserData(data) {
         method: "POST",
         contentType: "application/json",
         dataType: "json",
+        async: false,
         data:JSON.stringify(data),
         success: function (res) {
-            console.log("Res object: ", res);
-            console.log("String res", JSON.stringify(res));
-            firstnameXXX = JSON.stringify(res);
+            localStorage.setItem('userLoggedId', res.id);
         }
-
     });
-        /*.done(function (res) {
-            console.log("Res object: ", res);
-            console.log("String res", JSON.stringify(res));
-            return JSON.stringify(res);
-        });*/
-        /*.error(function () {
-            alert('Nie udało się pobrać danych zalogowanego usera');
-        })*/
-    //window.location.href = "usersList";
-    return firstnameXXX;
 }
+
 
     function login(data) {
     $.ajax({
@@ -61,18 +44,16 @@ function prepareUserData(data) {
         method: "POST",
         contentType: "application/json",
         dataType: "json",
-        data: JSON.stringify(data)
-    })
-        .done(function (res) {
-            console.log("res: ", res);
+        data: JSON.stringify(data),
+        success: function (res){
             if(res==true)
-                alert('Użytkownik zalogował się');
+                console.log('Użytkownik o id: ' + localStorage.getItem('userLoggedId') + ' zalogował się')
             window.location.href = "usersList"
-        })
-        .error(function (res) {
-            console.log("res: ", res);
+        },
+        error: function (res) {
             if(res==false)
                 alert('Nie udało się zalogować');
-        })
+        }
+    })
 }
 

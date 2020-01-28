@@ -1,18 +1,12 @@
 
-// const apiUrl = "http://localhost:8080";
-/*const $btn = $("#button")
-const $table = $("#table")*/
-
-function test() {
+/*function test() {
     $('#buttonAdress').on("click", function () {
         console.log('Uwaga');
         console.log("globalvariable: ", globalVariable);
         console.log("firsname: ", firstnameXXX);
-        //console.log("logged user.firstname", loggedUser);
-        //console.log("logged user.email", loggedUser.email);
-        //console.log("Id usera: " ,loggedUser.id);
+        console.log("samo id trzeci raz: ", localStorage.getItem('userLoggedId'));
     })
-}
+}*/
 
 function getUsersList() {
     $('#button').on("click", function (e) {
@@ -32,7 +26,6 @@ function getUsersList() {
             });
             $('#table > tbody').append(users_data);
             deleteUser(users_data);
-            console.log("fdfsf:", globalVariable);
         })
     });
  }
@@ -57,10 +50,10 @@ function deleteUser() {
         })
 }
 
-function test1() {
-    $('#buttonAdress').click(function () {
-        console.log('Uwaga');
-        //console.log(globalVariable.test);
-        //alert(globalVariable.test);
-        })
+
+function addHomePage() {
+    $('#addHomeBtn').on("click", function () {
+        console.log("Id zalogowanego usera ", localStorage.getItem('userLoggedId'));
+        window.location.href = "home";
+    })
 }

@@ -13,6 +13,7 @@
   <br>
   <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
   <button type="button" id="buttonAdress" class="btn btn-success">Pobierz listę adresów moich domów</button>
+  <button type="button" id="addHomeBtn" class="btn btn-success">Dodaj dom</button>
   <br>
   <br>
   <table id="table" class="table table-striped">
@@ -33,6 +34,7 @@
   <script src="../../js/login.js" type="text/javascript"></script>
   <script src="../../js/usersList.js" type="text/javascript"></script>
   <script src="../../js/home.js" type="text/javascript"></script>
+  <script src="../../js/adress.js" type="text/javascript"></script>
 
 
   </body>

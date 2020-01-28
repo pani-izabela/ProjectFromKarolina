@@ -4,8 +4,10 @@ window.onload = function () {
     prepareRegisterData();
     getUsersList();
     //deleteUser();
-    //prepareHomeData();
-    test();
+    prepareHomeData();
+    addHomePage();
+    addHome();
+    prepareAdressData();
 
 };
 
