@@ -48,42 +48,7 @@
   <script src="../../js/usersList.js" type="text/javascript"></script>
   <script src="../../js/home.js" type="text/javascript"></script>
   <script src="../../js/adress.js" type="text/javascript"></script>
-  <%--<script type="text/javascript">
-    // function prepareHomeData() {
-      $('#addingAdressBtn').click(function () {
-        let adresData = {
-          street: $('#street').val(),
-          nrHome: $('#nrHome').val(),
-          nrFlat: $('#nrFlat').val(),
-          city: $('#city').val(),
-          postalCode: $('#postalCode').val(),
-          home:{
-              id: '18'
-          },
-          user:{
-              id: '17'
-          }
-        };
-          addAdress(adresData);
-      })
-    // }
+  <%--<script src="../../js/homesList.js" type="text/javascript"></script>--%>
 
-     function addAdress(data) {
-      $.ajax({
-        url: "http://localhost:8080" + '/addAdress',
-        method: "POST",
-        contentType: "application/json",
-        dataType: "json",
-        data: JSON.stringify(data)
-      })
-              .done(function () {
-                window.location.href = "login"
-                alert('Udało się dodać adres');
-              })
-              .error(function () {
-                alert('Nie udało się dodać adresu');
-              })
-     }
-  </script>--%>
   </body>
 </html>

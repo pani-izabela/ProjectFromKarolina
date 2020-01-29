@@ -85,3 +85,10 @@ function getUserHomes() {
         })
     });
 }
+
+function findHomePage() {
+    $('#findHomeBtn').on("click", function () {
+        console.log("Id szukanego adresu ");
+        window.location.href = "homesList";
+    })
+}

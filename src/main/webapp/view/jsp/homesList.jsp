@@ -11,27 +11,39 @@
   <body>
   <%--<a href="usersList.jsp" role="button" class="button">Pobierz listę użytkowników</a>--%>
   <br>
-  <button type="button" id="button" class="btn btn-success">Pobierz listę użytkowników</button>
-  <button type="button" id="addHomeBtn" class="btn btn-success">Dodaj dom</button>
-  <button type="button" id="showHomesBtn" class="btn btn-success">Pokaż moje domy</button>
-  <button type="button" id="findHomeBtn" class="btn btn-success">Znajdź dom</button>
+  <div class="container">
+    <h2>Podaj adres</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="street">Ulica</label>
+          <input type="text" class="form-control" id="street" placeholder="Podaj nazwę ulicy">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="nrHome">Nr domu</label>
+          <input type="text" class="form-control" id="nrHome" placeholder="Podaj nr domu">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="nrFlat">Nr mieszkania</label>
+          <input type="text" class="form-control" id="nrFlat" placeholder="Podaj nr mieszkania">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="city">Miasto</label>
+          <input type="text" class="form-control" id="city" placeholder="Podaj miasto">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="postalCode">Kod pocztowy</label>
+          <input type="text" class="form-control" id="postalCode" placeholder="Podaj kod pocztowy">
+        </div>
+      </div>
+      <button type="button" class="btn btn-success" id="searchBtn">Szukaj domu</button>
+    </form>
+  </div>
   <br>
   <br>
-  <table id="table" class="table table-striped">
-    <thead>
-    <tr >
-      <th scope="col">id</th>
-      <th scope="col">imię</th>
-      <th scope="col">nazwisko</th>
-      <th scope="col">email</th>
-      <th scope="col">action</th>
-    </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <br>
-  <br>
-  <table id="tableUserHomes" class="table table-striped">
+  <table id="tableHomes" class="table table-striped">
     <thead>
     <tr >
       <th scope="col">id</th>
@@ -55,6 +67,7 @@
   <script src="../../js/home.js" type="text/javascript"></script>
   <script src="../../js/adress.js" type="text/javascript"></script>
   <%--<script src="../../js/homesList.js" type="text/javascript"></script>--%>
+
 
   </body>
 </html>
