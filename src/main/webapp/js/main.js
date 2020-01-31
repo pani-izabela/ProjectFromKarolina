@@ -1,6 +1,6 @@
 
 window.onload = function () {
-    prepareLoginData();
+    //prepareLoginData();
     prepareRegisterData();
     getUsersList();
     //deleteUser();

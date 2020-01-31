@@ -1,4 +1,7 @@
+$(document).ready(function () {
 
+    prepareLoginData();
+});
 var globalVariable= {
     test: "Iza"
 };
