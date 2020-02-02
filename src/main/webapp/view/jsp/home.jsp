@@ -31,42 +31,6 @@
     </form>
   </div>
   <br>
-
-  <script src="../../js/main.js" type="text/javascript"></script>
-  <script src="../../js/register.js" type="text/javascript"></script>
-  <script src="../../js/login.js" type="text/javascript"></script>
-  <script src="../../js/usersList.js" type="text/javascript"></script>
   <script src="../../js/home.js" type="text/javascript"></script>
-  <script src="../../js/adress.js" type="text/javascript"></script>
-  <%--<script src="../../js/homesList.js" type="text/javascript"></script>--%>
-  <%--<script type="text/javascript">
-    // function prepareHomeData() {
-      $('#addingHomeBtn').click(function () {
-        let homeData = {
-          area: $('#area').val(),
-          price: $('#price').val(),
-          type: $('#type').val()
-        };
-        addHome(homeData);
-      })
-    // }
-
-     function addHome(data) {
-      $.ajax({
-        url: "http://localhost:8080" + '/addHome',
-        method: "POST",
-        contentType: "application/json",
-        dataType: "json",
-        data: JSON.stringify(data)
-      })
-              .done(function () {
-                window.location.href = "login"
-                alert('Udało się dodać dom');
-              })
-              .error(function () {
-                alert('Nie udało się dodać domu');
-              })
-     }
-  </script>--%>
   </body>
 </html>

@@ -47,6 +47,11 @@ public class UserviewController {
         return userviewService.findByUseridQuery(userId);
     }
 
+    @RequestMapping(value = "/getHomeAdress", method = RequestMethod.GET)
+    public @ResponseBody Iterable<Userview> getHomeAdress(@RequestParam Integer adressId){
+        return userviewService.findByAdressidQuery(adressId);
+    }
+
 
 
 }

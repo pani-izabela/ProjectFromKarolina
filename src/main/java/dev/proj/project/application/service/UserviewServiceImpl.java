@@ -18,4 +18,9 @@ public class UserviewServiceImpl implements UserviewService {
     public List<Userview> findByUseridQuery(int userId) {
         return userviewDAO.findByUseridQuery(userId);
     }
+
+    @Override
+    public List<Userview> findByAdressidQuery(int adressId) {
+        return userviewDAO.findByAdressidQuery(adressId);
+    }
 }

@@ -8,4 +8,5 @@ import java.util.List;
 public interface UserviewDAOCastom {
 
     List<Userview> findByUseridQuery(int userId);
+    List<Userview> findByAdressidQuery(int adressId);
 }

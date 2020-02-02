@@ -22,4 +22,11 @@ public class UserviewDAOImpl implements UserviewDAOCastom {
                 .getResultList();
     }
 
+    @Override
+    public List<Userview> findByAdressidQuery(int adressId) {
+        return em.createNamedQuery(Userview.GET_ADRESS_BY_ADRESSID, Userview.class)
+                .setParameter("adressId", adressId)
+                .getResultList();
+    }
+
 }

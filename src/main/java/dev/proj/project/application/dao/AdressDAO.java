@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AdressDAO extends CrudRepository<Adress, Integer> {
+public interface AdressDAO extends CrudRepository<Adress, Integer>, AdressDAOCastom {
 
 
 }

@@ -31,7 +31,5 @@
 
   <script src="../../js/login.js" type="text/javascript"></script>
 
-  <%--<script src="../../js/homesList.js" type="text/javascript"></script>--%>
-
   </body>
 </html>

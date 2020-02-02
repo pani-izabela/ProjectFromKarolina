@@ -8,4 +8,6 @@ import java.util.List;
 public interface UserviewService {
 
     List<Userview> findByUseridQuery(int userId);
+
+    List<Userview> findByAdressidQuery(int adressId);
 }

@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    prepareHomeData()
+});
 
 function prepareHomeData() {
     $('#addingHomeBtn').click(function () {

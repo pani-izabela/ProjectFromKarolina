@@ -1,15 +1,15 @@
-
+/*
 window.onload = function () {
     //prepareLoginData();
-    prepareRegisterData();
-    getUsersList();
+    //prepareRegisterData();
+    //getUsersList();
     //deleteUser();
-    prepareHomeData();
-    addHomePage();
-    addHome();
-    prepareAdressData();
-    getUserHomes();
-    findHomePage();
+    //prepareHomeData();
+    //addHomePage();
+    //addHome();
+    //prepareAdressData();
+    //getUserHomes();
+    //findHomePage();
 
-};
+};*/
 

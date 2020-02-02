@@ -4,6 +4,8 @@ import dev.proj.project.application.dao.AdressDAO;
 import dev.proj.project.application.dao.HomeDAO;
 import dev.proj.project.application.model.Adress;
 import dev.proj.project.application.model.Home;
+import dev.proj.project.application.model.User;
+import dev.proj.project.application.service.AdressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,9 @@ public class AdressController {
 
     @Autowired
     private AdressDAO adressDAO;
+
+    @Autowired
+    private AdressService adressService;
 
     public AdressController(AdressDAO adressDAO) {
         this.adressDAO = adressDAO;
@@ -53,6 +58,15 @@ public class AdressController {
 
     //----------------------------------------------------------------------- pozostałe metody
 
-
+    @RequestMapping(value = "/getDataWantedAdress", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
+    public @ResponseBody
+    Adress getDataWantedAdress(@RequestBody Adress adress){
+        String street = adress.getStreet();
+        String nrHome = adress.getNrHome();
+        String nrFlat = adress.getNrFlat();
+        String city = adress.getCity();
+        Adress adressFromDB = adressService.findByStreetAnsNrHomeAndNrFlatAndCityQuery(street, nrHome, nrFlat, city);
+        return adressFromDB;
+    }
 
 }

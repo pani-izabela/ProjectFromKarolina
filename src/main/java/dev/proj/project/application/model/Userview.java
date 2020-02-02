@@ -7,7 +7,8 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @NamedQueries({
-        @NamedQuery(name = Userview.GET_USER_BY_USERID, query = Userview.QUERY_GET_USER_BY_USERID)
+        @NamedQuery(name = Userview.GET_USER_BY_USERID, query = Userview.QUERY_GET_USER_BY_USERID),
+        @NamedQuery(name = Userview.GET_ADRESS_BY_ADRESSID, query = Userview.QUERY_GET_ADRESS_BY_ADRESSID)
 })
 
 @Entity
@@ -20,6 +21,9 @@ public class Userview {
     public static final String GET_USER_BY_USERID = "Userview.get_user_by_userid";
     public static final String QUERY_GET_USER_BY_USERID = "select u from Userview u where u.user_id = :userId";
 
+    public static final String GET_ADRESS_BY_ADRESSID = "Userview.get_adress_by_adressid";
+    public static final String QUERY_GET_ADRESS_BY_ADRESSID = "select u from Userview u where u.adress_id = :adressId";
+
     @Id
     @Column(name = "id")
     private Integer id;
@@ -28,10 +32,10 @@ public class Userview {
     private Integer user_id;
 
     @Column(name = "adress_id")
-    private Integer adress_id;
+    private String adress_id;
 
     @Column(name = "home_id")
-    private Integer home_id;
+    private String home_id;
 
     @Column(name = "street")
     private String street;

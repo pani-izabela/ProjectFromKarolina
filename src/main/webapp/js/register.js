@@ -1,5 +1,7 @@
+$(document).ready(function () {
 
-// const apiUrl = "http://localhost:8080";
+    prepareRegisterData();
+});
 
 function prepareRegisterData() {
     $('#registerBtn').click(function () {

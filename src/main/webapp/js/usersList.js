@@ -1,12 +1,9 @@
-
-/*function test() {
-    $('#buttonAdress').on("click", function () {
-        console.log('Uwaga');
-        console.log("globalvariable: ", globalVariable);
-        console.log("firsname: ", firstnameXXX);
-        console.log("samo id trzeci raz: ", localStorage.getItem('userLoggedId'));
-    })
-}*/
+$(document).ready(function () {
+    getUsersList();
+    addHomePage();
+    getUserHomes();
+    findHomePage()
+});
 
 function getUsersList() {
     $('#button').on("click", function (e) {

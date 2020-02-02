@@ -2,18 +2,6 @@ $(document).ready(function () {
 
     prepareLoginData();
 });
-var globalVariable= {
-    test: "Iza"
-};
-
-/*var loggedUser = {
-    id: 1,
-    firstname: "Olaf",
-    lastname: "Green",
-    email: loginData.email,
-    pass: loginData.pass
-};*/
-
 
 function prepareLoginData() {
     $('#loginbtn').click(function () {
@@ -41,7 +29,7 @@ function prepareUserData(data) {
 }
 
 
-    function login(data) {
+function login(data) {
     $.ajax({
         url: "http://localhost:8080" + '/loginUser',
         method: "POST",

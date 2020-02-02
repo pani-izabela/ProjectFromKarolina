@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    prepareAdressData();
+});
+
 function prepareAdressData() {
 $('#addingAdressBtn').click(function () {
     let adresData = {
