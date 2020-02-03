@@ -71,8 +71,8 @@ function getUserHomes() {
                 user_homes_data += '<td>' + value.price + '</td>';
                 user_homes_data += '<td>' + value.type + '</td>';
                 user_homes_data += '<td>' + value.street + '</td>';
-                user_homes_data += '<td>' + value.nrHome + '</td>';
-                user_homes_data += '<td>' + value.nrFlat + '</td>';
+                user_homes_data += '<td>' + value.home + '</td>';
+                user_homes_data += '<td>' + value.flat + '</td>';
                 user_homes_data += '<td>' + value.city + '</td>';
                 user_homes_data += '<td>' + value.code + '</td>';
                 user_homes_data += '</tr>';

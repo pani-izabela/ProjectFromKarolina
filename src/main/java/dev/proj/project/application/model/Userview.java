@@ -32,10 +32,10 @@ public class Userview {
     private Integer user_id;
 
     @Column(name = "adress_id")
-    private String adress_id;
+    private Integer adress_id;
 
     @Column(name = "home_id")
-    private String home_id;
+    private Integer home_id;
 
     @Column(name = "street")
     private String street;
